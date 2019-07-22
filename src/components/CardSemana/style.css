@@ -1,0 +1,50 @@
+.cardSemana{
+    display: flex;
+    flex-direction: column;
+}
+.cardSemanaCont{
+    position: relative;
+    width: 96%;
+    margin: 2vw;
+    margin-bottom: 7vw;  
+    border: 1px solid rgba(0, 85, 120, 0.7);
+    border-radius: 7px;
+}
+.cardSemanaCont img{
+    position: absolute;
+    width: 5vw;
+    padding: 5vw;
+    top: 1vw;
+    right: 0;
+}
+.cardSemanaCont h2{
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+    font-size: 4.5vw;
+    color: #222;
+    text-align: center;
+}
+.cardSemanaList{
+    position: relative;
+    width: 96%;
+    margin: 2vw;
+    margin-top: 0;
+    border-radius: 10px;
+    list-style: none;
+    padding: 0;
+    
+}
+.cardSemanaList li{
+    position: relative;
+    width: 96%;
+    margin: 0;
+    left: 0;
+    padding: 2vw;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    text-align: center;
+    font-size: 5vw;
+    cursor: pointer;
+}

@@ -1,0 +1,28 @@
+.cardFood{
+    position: relative;
+    width: 96%;
+    margin-left: 2vw;
+    margin-right: 2vw; 
+    border: 1px solid rgba(0, 85, 120, 0.7);
+    border-radius: 7px;
+}
+.cardFood h4{
+    position: absolute;
+    top: 5vw;
+    left: 4vw;
+    margin: 0;
+    font-size: 2.4vw;
+    color: white;
+    background: rgba(0, 85, 120, 1);
+    padding: 0.7vw 5vw;
+    border-radius: 3vw
+}
+.cardFood h2{
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    font-size: 4.5vw;
+    color: #222;
+    text-align: center;
+}

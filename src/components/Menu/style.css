@@ -1,0 +1,23 @@
+.Menu{
+    position: absolute;
+    background: #fff;
+    top:0;
+    width: 70vw;
+    z-index: 1000;
+    height: 100vh;
+    transition: all 0.7s ease-in-out;
+}
+.Menu h3{
+    color: #444;
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+}
+.noShowMenu{
+    position: absolute;
+    left: -100%;
+  }
+  .showMenu{
+    position: absolute;
+    left: 0;
+  }

@@ -1,0 +1,23 @@
+.cardTodayCont{
+    position: relative;
+    margin: 2vw;
+    margin-bottom: 7vw;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.20);
+}
+.cardTodayCont h4{
+    font-family: 'Lato';
+    font-weight: 300;
+    font-size: 3.5vw;
+    position: absolute;
+    top: 2vw;
+    left: 3vw;
+    margin: 0 auto;
+    color: #666;
+}
+.cardTodayCont h2{
+    padding: 5vw;
+    font-size: 5vw;
+    color: #222;
+    text-align: center;
+}
