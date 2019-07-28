@@ -1,44 +1,36 @@
-import React, {useState, useEffect} from 'react';
-//firebase
-import firebase from 'firebase/app';
-import 'firebase/database';
-import {DB_CONFIG} from './config/config'
+import React, {useState} from 'react';
+//react router v4
+import {Route, Switch, Link } from 'react-router-dom';
 
+//addons
 import fork from './fork.png';
 import menu from './menu.png';
 import './App.css';
 
-import Menu from './components/Menu';
 
 //Components
 import Home from './components/Home';
-//conectando Firebase
-const app = firebase.initializeApp(DB_CONFIG);
-const db = app.database().ref().child('foods');
+import Menu from './components/Menu';
+import Planner from './components/Planner';
 
 
 //App
 function App() {
   const [showMenu, setShowMenu] = useState(false);
-  const [foods, setFoods] = useState({})
-  useEffect(()=>{
-    db.on('child_added', snap=>{
-      foods.push({
-        foodId: snap.key,
-        foodName: snap.val().foodName
-      });
-    setFoods({foods});
-    db.push().set({foodName: 'hola'});
-    })
-  })
+ 
+  const handleMenu = () => setShowMenu(!showMenu);
+  
   return (
     <div className="App">
       <div className='Nav'>
-        <img id='menu' onClick={()=>setShowMenu(!showMenu)} src={menu}/>
-        <img id='fork' src={fork}/>
+        <img id='menu' onClick={handleMenu} src={menu}/>
+        <Link to='/'><img id='fork' src={fork}/></Link>
       </div>
-      <Menu style={showMenu ? 'showMenu ' : 'noShowMenu '}/>
-      <Home/>
+      <Menu handle={handleMenu} style={showMenu ? 'showMenu ' : 'noShowMenu '}/>
+      <Switch>
+        <Route exact path='/' component={Home}/>
+        <Route exact path='/planner' component={Planner}/>
+      </Switch>
     </div>
   );
 }

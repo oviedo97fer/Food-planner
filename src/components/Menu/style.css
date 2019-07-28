@@ -1,11 +1,22 @@
 .Menu{
     position: absolute;
-    background: #fff;
     top:0;
-    width: 70vw;
-    z-index: 1000;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     transition: all 0.7s ease-in-out;
+}
+.menuCont{
+  z-index: 10000;
+  background: #fff;
+  width: 70%;
+  height: 100%;
+  position: fixed;
+}
+.hoverMenu{
+  position: fixed;
+  height: 100%;
+  width: 100vw;
+  z-index: 900;
 }
 .Menu h3{
     color: #444;
